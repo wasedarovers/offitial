@@ -1,0 +1,472 @@
+/* all */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* html */
+html {
+    scroll-behavior: smooth;
+}
+
+/* body 共通部分 */ 
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+h2 {
+    font-size: 70px;
+    color: #720000;
+    text-align: center;
+    margin: 100px 0 100px;
+}
+
+
+.discription {
+    display: flex;
+    max-width: 90%;
+    margin: 0 auto;
+    gap: 5%;
+}
+
+.discription img {
+    border-radius: 10px;
+}
+
+
+
+.discription h2 {
+    font-size: 36px;
+    color: black;
+    margin: 0px 0 20px;
+    text-align: start;
+}
+
+.discription p {
+    color: #777777;
+    margin-top: 27px;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+#about,
+#activities,
+#qnda,
+#contact {
+    scroll-margin-top: 120px;
+}
+
+#about,
+#activities,
+#qnda,
+#contact {
+    width: 90%;
+    margin: 0 auto;
+}
+/* header  */
+header {
+    background-color: #720000;
+    height: 15vh;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+}
+
+
+
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+header img {
+    margin-left: 35px;
+    position: absolute;
+    top: 15%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+ul {
+    display: flex;
+}
+
+ul a {
+    all: unset;
+}
+
+
+header a {
+    color: white;
+    font-size: 20px;
+    margin: 10px 0;
+    list-style: none;
+    padding-right: 30px;
+    padding-top: 19px;
+    height: 50px;
+}
+
+header li,a{
+    cursor: pointer;
+}
+header li:hover {
+    opacity: 0.6;
+}
+header i{
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+header i:hover {
+    opacity: 0.6;
+}
+
+
+/* main */
+
+/* hero */
+.hero {
+    position: relative;
+    height: 120vh;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 1000;
+    font-size: 75px;
+    color: white;
+    text-shadow: 2px 2px 5px #000;
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    text-align: center;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    background-image: var(--bg-image, url('images/IMG_7663.jpeg'));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    object-fit: cover;
+    transition: background-image 1s ease-in-out;
+}
+
+/* アニメーションは削除 */
+
+
+
+/* about_us */
+
+
+
+/* our_activity */
+
+.our_activity .discription{
+    margin-bottom:100px;
+}
+.our_activity .discription:nth-child(:last-child){
+    margin-bottom:0px;
+}
+.our_activity .discription:nth-child(even) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+
+
+
+
+/* qanda */
+.quetions {
+    border-radius: 10px;
+    background-color: #ddd;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+
+.quetion,
+.answer {
+    height: 50px;
+    padding: 20px 20px 30px 30px;
+}
+.quetion{
+    padding-bottom: 15px;
+}
+
+/* 
+.quetion::before {
+    content: 'Q';
+    color: #720000;
+    font-size: 30px;
+    margin-right: 30px;
+
+} */
+
+.q{
+    padding-top: 20px;
+    color: #720000;
+    font-size: 25px;
+    margin-left: 30px;
+}
+
+
+
+.q::after {
+    color: #000;
+    content: "+";
+    float: right;
+    margin-right: 50px;
+    font-size: 40px;
+    transition: transform .3s;
+    font-weight: normal;
+}
+
+.answer {
+    height: auto;
+    padding: 20px 20px 45px 30px;
+    display: none;
+    animation: fadein 1s;
+}
+
+
+
+.answer::before {
+    display: block;
+    content: 'A';
+    color: #720000;
+    font-size: 25px;
+    margin-right: 30px;
+    margin-bottom:25px ;
+}
+
+
+.active.q::after{
+    transform: rotate(45deg); 
+}
+
+.show {
+    display: block;
+}
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+        transform: translateY(-30);
+    }
+
+    100%{
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Contact */
+
+.contact_h3 {
+
+    width: 80%;
+    margin: 0 auto;
+}
+
+.Contact h3 {
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.contact_toul {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    gap: 25%;
+}
+
+.contact_toul a {
+    text-decoration: none;
+    color: #777777;
+    
+}
+.contact_toul h3{
+    margin-top: 9px;
+}
+
+.contact_toul h3:hover {
+    border-bottom: 2px solid #333;
+    opacity: 0.6;
+}
+.contact_toul i {
+    font-size: 50px;
+}
+.contact_toul i:hover {
+    border-bottom: 2px solid #333;
+    opacity: 0.6;
+}
+
+.pc {
+    display: block;
+}
+
+.smp {
+    display: none;
+}
+
+
+
+/* footer */
+
+footer {
+    background-color: #999;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0 40px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+
+footer a{
+    list-style: none;
+    margin-top: 15px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+
+footer li:hover {
+    opacity: 0.6;
+}
+
+footer i:hover {
+    opacity: 0.6;
+}
+
+/* アニメーション */
+
+.floating-text {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: floatUp 1.2s ease-out forwards;
+  }
+
+  @keyframes floatUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+/* フレックスデザイン */
+@media (max-width: 768px) {
+
+    header{
+        height: 13vh;
+    }
+    header a{
+        font-size: 60%;
+        font-weight: bold;
+        padding-right:10px;
+
+    }
+    header img {
+        width: 7vh;
+        margin-left: 20px;
+        max-width:60px;
+    }
+    .hero{
+        height: 45vh;
+        
+    }
+    .hero::after{
+        margin-top: 13vh;
+    }
+    .hero h1{
+        position: absolute;
+        top: 59%;
+        font-size: 35px;
+    }
+    .abouth2{
+        margin-top: 170px;
+    }
+
+    .discription {
+        flex-direction: column;
+    }
+    .our_activity .discription:nth-child(even){
+        flex-direction: column;
+    }
+
+   
+    .discription img {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        font-size: 50px;
+    }
+
+    .discription h2 {
+        text-align: center;
+        font-size: 30px;
+
+    }
+
+    .pc {
+        display: none;
+    }
+
+    .smp {
+        display: block;
+        font-size: 15px;
+    }
+
+
+    .contact_toul {
+        margin-top: 70px;
+    }
+
+    .Contact {
+        margin-bottom: 100px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    .q::after{
+        font-size: 20px;
+    }
+    .answer{
+        height: auto;
+    }
+
+    .lastanswer {
+        height: auto;
+    }
+
+    .contact_toul {
+        justify-content: space-between;
+    }
+
+    footer a{
+        font-size: 60%;
+    }
+
+
+}
